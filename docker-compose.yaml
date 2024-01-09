@@ -1,0 +1,11 @@
+version: '3'
+services:
+  db:
+    image: 9a5e0d0cf6dea27fa96b889dc4687c317f3ff99f582083f2503433d534dfbba3
+    restart: always
+    ports:
+      - 27017:27017
+    environment:
+      - MONGODB_DATABASE=nest-pokemon
+    volumes:
+      - ./mongo:/data/db
